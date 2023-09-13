@@ -10,9 +10,15 @@ function soloNumeros(array) {
   // Ej: 
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
-  // Tu código aca:
-
+  let arreglo = [];
+  for (let i = 0; i < array.length; i++) {
+     if(typeof array[i] === "number"){
+      arreglo.push(array[i]);
+     }
+  }
+  return arreglo;
 }
+console.log(soloNumeros([1, 'Henry', 2]))
 
 // No modifiques nada debajo de esta linea //
 
