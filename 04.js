@@ -12,9 +12,12 @@ function numeroSimetrico(num) {
   // Ej:
   // numeroSimetrico(11711) devuelve true
 
-  // Tu código:
-
+  let entero = num.toString()// 1ro convertimos para luego poder hacer la comparacion con la otra variable.
+  let invertido = entero.split('').reverse().join('')// esta variable invierte los caracteres.
+     return entero === invertido // esto seria lo mismo que la condicion 'if'.
+      
 }
+console.log(numeroSimetrico(121));
 
 // No modifiques nada debajo de esta linea //
 
