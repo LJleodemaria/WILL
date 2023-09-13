@@ -22,9 +22,19 @@ function filtrar(funcion) {
   //   name: 'lamp'
   // }]
   // productos.filtrar(function(p) {
-  //   return p.price >= 50;
+  //   return p.price > 50;
   // }) => [{price: 100, name:'tv'}]
 
+  Array.prototype.filtrar = function(funcion){// arrays es una clase. siempre q vallamos a definir un metodo para una
+    let filtrados = [];          //clase utilizamos 'prototype
+                                          //los arreglos vienen de la clase 'array' y utilizamos 'this
+    for (let i = 0; i < this.length; i++) {//para hacer referencia a esos elementos de la clase.
+      if(funcion(this[i])){         //si this[i] cumple con el callback (funcion) entonces        
+        filtrados.push(this[i]);    // lo agregamos a la variable filtrados.
+      }
+    }  
+    return filtrados;                                                
+  }
 };
 
 // No modifiques nada debajo de esta linea //
